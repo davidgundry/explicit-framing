@@ -4,9 +4,9 @@ Previous work shows delivering experiments as games increases participant enjoym
 
 ## Hypotheses
 
-1. With experimental framing, a greater proportion of the data will be accurate
-2. With experimental framing, participants will enjoy the game less
-3. Manipulation check: With experimental framing, participants will experience the game with an 'experiment' frame rather than a 'play' frame.
+1. With high experimental framing, a greater proportion of the data will be accurate
+2. With high experimental framing, participants will enjoy the game less
+3. Manipulation check: With high experimental framing, participants will experience the game with an 'experiment' frame rather than a 'play' frame.
 
 Design Plan
 -----------
@@ -34,6 +34,7 @@ Particpants will be assigned to either a High-Framing or Low-Framing condition.
 
 1. Age > 18
 2. First langauge English
+3. Have not participated in any of my previous studies
 
 ### Sample Size Rationale
 

@@ -16,7 +16,7 @@ By starting this study, you consent to participating in this study. Details of t
 Task
 ----
 
-You will play a puzzle game for 7 minutes. There is a tutorial that will show you how to play. Afterwards you will answer some questions about your experience on a scale of 1-5.
+You will play a puzzle game for 8 minutes. There is a tutorial that will show you how to play. Afterwards you will answer some questions about your experience on a scale of 1-5.
 
 You will be asked for your age, gender, first language, and gaming experience.
 
