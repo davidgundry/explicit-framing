@@ -1,0 +1,1 @@
+You will now be shown a puzzle game. You can play this game however you like for 5 minutes. Have fun!
