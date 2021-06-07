@@ -82,7 +82,7 @@ Analysis Plan
 The following will be excluded:
 
 1. Participants reporting their age as under 18
-2. Participants reporting their first langauge as other than Enlish.
+2. Participants reporting their first langauge as other than English.
 3. Incomplete records will be excluded.
 4. Participants with fewer than 13 moves
 
