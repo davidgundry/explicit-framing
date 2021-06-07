@@ -17,6 +17,8 @@ The Intrinsic Motivation Inventory: Enjoyment subscale (Deci and Ryan, n.d.).
 
 Responses on a 5 point likert scale 1 = "Not at all", 3 = "Somewhat true", 5 = "Very true"
 
+[ Removed for inclusion in public repository ]
+
 ## Bug report
 
 Yes/No, then free text box
