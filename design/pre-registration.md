@@ -26,14 +26,14 @@ As of the date of submission of this research plan for preregistration, the data
 
 ### Data collection procedures
 
-Particpants will be assigned to either a High-Framing or Low-Framing condition. 
+Participants will be assigned to either a High-Framing or Low-Framing condition. 
 
 ### Sample Size
 
 148 participants will be recruited from Prolific. The following filters will apply:
 
 1. Age > 18
-2. First langauge English
+2. First language English
 3. Have not participated in any of my previous studies
 
 ### Sample Size Rationale
@@ -59,7 +59,7 @@ We will manipulate the information and instructions given to participants at the
 
 **Accuracy**: Accuracy will be measured as the proportion of data collected that corresponds to standard English word order.
 
-**Enjoyment**: Enjoyment will be measured using the Intrinsic Motivation Inventoy: Enjoyment Subscale. (Deci and Ryan, n.d.)
+**Enjoyment**: Enjoyment will be measured using the Intrinsic Motivation Inventory: Enjoyment Subscale. (Deci and Ryan, n.d.)
 
 **Play Framing** Play Framing will be measured with adapted versions of the "Direct Play" questions of the Play Experience Scale (Pavlas et al. 2012):
 
