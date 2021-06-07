@@ -10,6 +10,12 @@ print("Analysing dataset", dataset, "\n")
 rawData = load_data("data/"+dataset)
 df = process_data(rawData)
 
+before_consent = len(df.index)
+df = df[df['consent_understand'] == "true"]
+df = df[df['consent_publication'] == "true"]
+df = df[df['consent'] == "true"]
+print("Excluded due to lack of consent (should be 0)", before_consent - len(df.index))
+
 before_move_min = len(df.index)
 df = df[df['total_moves'] >= minimum_moves]
 print("Excluded due to moves <", minimum_moves, "=", (before_move_min - len(df.index)))

@@ -16,6 +16,7 @@ def process_data(rawData):
         version.append(d["data"]["gameVersion"])
             
     gaming_frequency = []
+    c1, c2, c3 = [], [], []
     pf1, pf2, pf3, pf4, pf_value = [], [], [], [], []
     imi1, imi2, imi3, imi4, imi5, imi6, imi7, imi_enjoyment = [], [], [], [], [], [], [], []
     bug, bugdesc = [], []
@@ -29,6 +30,9 @@ def process_data(rawData):
     time_per_input_from_8min = []
     for i, d in enumerate(data):
         gaming_frequency.append(d["answers"][1])
+        c1.append(d["consent"][0])
+        c2.append(d["consent"][1])
+        c3.append(d["consent"][2])
 
         # Calculate IMI Enjoyment subscale mean and Play Framing mean
         # Scores for questions 3 and 4 of IMI and 4 of Play Framing are reversed
@@ -84,6 +88,9 @@ def process_data(rawData):
             "version": version,
             "language": language,
             "gaming_frequency": gaming_frequency,
+            "consent_understand": c1,
+            "consent_publication": c2,
+            "consent":c3,
             "pf1": pf1, "pf2": pf2, "pf3": pf3, "pf4": pf4,
             "imi1": imi1, "imi2": imi2, "imi3": imi3, "imi4": imi4, "imi5": imi5, "imi6": imi6, "imi7": imi7,
             "bug": bug,
