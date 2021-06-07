@@ -2,10 +2,6 @@
 
 This is a repository of materials and data for the explicit framing experiment in the Effect of Experiment Framing on Game Data study. 
 
-//TODO: Set game to run for 8 minutes from start of tutorial, not start of recorded play (don't change playDuration variable)
-//TODO: Implement Play Framing questions
-//TODO: Implement Extra framing instructions
-
 ## Directory Structure
 
 * `data/` - processed/anonymised data
@@ -15,7 +11,7 @@ This is a repository of materials and data for the explicit framing experiment i
 * `design/` - ethics, preregistration documents, etc.
 * `final/` - versions of documents that have been officially submitted somewhere
 * `materials/` - contains materials that were used in the experiment
-* `img/` - screenshots of the game //TODO: fill this with screenshots of the final game version
+* `img/` - screenshots of the game
 * `raw/` - raw data stored here before processing and anonymisation
 
 ## Pre-Registration
