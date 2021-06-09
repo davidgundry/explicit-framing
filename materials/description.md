@@ -52,7 +52,7 @@ University of York
 
 This research has been subject to ethical review by:
 
-Physical Sciences Ethics Comittee
+Physical Sciences Ethics Committee
 University of York
 Chair: Dr Kanapathippillai Cumanan (kanapathippillai.cumanan@york.ac.uk)
 
