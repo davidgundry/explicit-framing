@@ -37,7 +37,7 @@ Between-participant design with two groups.
 
 ### Randomization
 
-Simple randomisation. However, the sample size will be extended if one of the groups has too few participants (see sampling plan).
+Simple randomisation.
 
 Sampling Plan
 -------------
