@@ -1,6 +1,13 @@
 # Effect of Experiment Framing on Game Data
 
-Previous work shows delivering experiments as games increases participant enjoyment but it decreases the accuracy of the data collected. This study will determine whether there is an effect of explicit experimental framing (the task being metacommunicatively framed as an experiment vs. a game) on the accuracy of the data collected and the enjoyment.
+## Description
+
+Investigating whether framing the play of an applied game for data collection as an experiment affects data quality. Previous work shows delivering experiments as games increases participant enjoyment but it decreases the accuracy of the data collected.
+
+This study will determine whether there is an effect of explicit experimental framing on the accuracy of the data collected and the enjoyment. Explicit experimental framing will be manipulated solely via the instructions and information that is given to participants before they play the game.
+
+Study Information
+-----------
 
 ## Hypotheses
 
@@ -11,38 +18,51 @@ Previous work shows delivering experiments as games increases participant enjoym
 Design Plan
 -----------
 
-## Study Type
+### Study type
 
-Between-participant experiment.
+Experiment - A researcher randomly assigns treatments to study subjects, this includes field or lab experiments. This is also known as an intervention experiment and includes randomized controlled trials.
 
-Participants will be assigned automatically by the game, making this a double-blind experiment.
+### Blinding
+
+* For studies that involve human subjects, they will not know the treatment group to which they have been assigned.
+* Personnel who interact directly with the study subjects (either human or non-human subjects) will not be aware of the assigned treatments. (Commonly known as “double blind”)
+
+### Is there any additional blinding in this study?
+
+Participants will be assigned automatically by the game.
+
+### Study design
+
+Between-participant design with two groups.
+
+### Randomization
+
+Simple randomisation. However, the sample size will be extended if one of the groups has too few participants (see sampling plan).
 
 Sampling Plan
 -------------
 
 ### Existing Data
 
-As of the date of submission of this research plan for preregistration, the data have not yet been collected.
+Registration prior to creation of data
 
 ### Data collection procedures
 
-Participants will be assigned to either a High-Framing or Low-Framing condition. 
+Participants will be recruited from Prolific with a study description as in `description.md`. The following filters will apply on Prolific:
+
+1. Age >= 18
+2. First language English
+3. Have not participated in any of my previous studies
+
+Participants will be paid £1.00 for a 10 minute task. 
 
 ### Sample Size
 
-148 participants will be recruited from Prolific. The following filters will apply:
-
-1. Age > 18
-2. First language English
-3. Have not participated in any of my previous studies
+200 participants
 
 ### Sample Size Rationale
 
 See the file `power-analysis.Rout`.
-
-### Stopping Rule
-
-Participants are assigned at random. If there are less than 74 participants in either of the conditions after the original sample size has been recruited (after exclusion criteria have been applied), we will increase the sample size in blocks of 5 until this condition is met. We will not recruit more than 168 participants in total, however.
 
 Variables
 ---------
@@ -57,7 +77,7 @@ We will manipulate the information and instructions given to participants at the
 
 ### Measured Variables
 
-**Accuracy**: Accuracy will be measured as the proportion of data collected that corresponds to standard English word order.
+**Accuracy**: Accuracy will be measured as the proportion of data collected that corresponds to standard English word order. It will be calculated for each player from the last 16 inputs made by the player.
 
 **Enjoyment**: Enjoyment will be measured using the Intrinsic Motivation Inventory: Enjoyment Subscale. (Deci and Ryan, n.d.)
 
@@ -71,20 +91,32 @@ We will manipulate the information and instructions given to participants at the
 Analysis Plan
 -------------
 
-**Hypothesis 1**: A two-tailed Mann-Whitney U test will be used to test whether the distribution of Accuracy differs significantly between the high-framing condition than the low-framing condition. α = 0.05
+### Statistical Models
 
-**Hypothesis 2**: A two-tailed two-sample t-test will be used to test whether the mean scores of Enjoyment are greater in the low-framing condition than the high-framing condition. α = 0.05.
+**Hypothesis 1**: A two-tailed Mann-Whitney U test will be used to test whether the distribution of Accuracy differs significantly between the high-framing condition than the low-framing condition.
 
-**Hypothesis 3**: A two-tailed two-sample t-test will be used to test whether the mean scores of Play Framing are greater in the low-framing condition than the high-framing condition. α = 0.05.
+**Hypothesis 2**: A two-tailed two-sample t-test will be used to test whether the mean scores of Enjoyment are greater in the low-framing condition than the high-framing condition.
 
-## Exclusion Criteria
+**Hypothesis 3**: A two-tailed two-sample t-test will be used to test whether the mean scores of Play Framing are greater in the low-framing condition than the high-framing condition.
+
+### Inference Criteria
+
+P values for Hypotheses 1 and 2 will be adjusted using the Holm-Bonferoni method, maintaining a family-wise error rate of 0.05.
+
+P value for Hypothesis 3 (manipulation check) will be compared against a comparison-wise error rate of 0.05.
+
+### Data Exclusion
 
 The following will be excluded:
 
 1. Participants reporting their age as under 18
 2. Participants reporting their first langauge as other than English.
-3. Incomplete records will be excluded.
-4. Participants with fewer than 13 moves
+3. Participants with fewer than 16 moves
+4. Participants reporting a bug
+
+### Missing Data
+
+Incomplete records will be excluded from hypothesis tests
 
 References
 ----------

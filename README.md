@@ -16,7 +16,7 @@ This is a repository of materials and data for the explicit framing experiment i
 
 ## Pre-Registration
 
-//TODO: Officially submit the preregistration once we're ready to run.
+//TODO: Officially submit the preregistration once we're ready to run. When doing so, copy GitHub files to OSF storage so they can be archived with the pre-registration.
 
 Pre-registration documents are found in `design/`. Dated uploads to OSF (which should match the records on OSF) are in `final/`. The power analysis script used in the pre-registration can be found in `r/`, which generated `out/power-anaysis.Rout`. You can generate this using the following command:
 
@@ -30,7 +30,7 @@ From [intrinsic elicitation 2](https://github.com/davidgundry/intrinsic-elicitat
 
 ## Data collection
 
-148 participants @ £1 per participant on Prolific = £197.33. If we go over, we'll pay no more than £235 (168 participants)
+200 participants @ £1 per participant on Prolific = £280
 
 //TODO: Provide details of data collection start/end etc. here
 
