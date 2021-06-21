@@ -9,7 +9,7 @@
 > 
 > # Hypothesis 1 (based on previous experiments)
 > # A two-tailed Mann-Whitney U test will be used to test whether the distribution of Accuracy
-> # differs significantly between the +Framing condition than the -Framing condition. α = 0.05
+> # differs significantly between the high-framing condition than the low framing condition. α = 0.05
 > alt <- "two.sided"
 > observedEffectSize <- 1.0005893861300805 # From exploratory analysis of the "Enjoyment and data
 >                                          # quality in a game for human-subject data collection"
@@ -38,16 +38,13 @@ NOTE: n is number in *each* group
 >                                          # history effects), we should still check for medium sized effects.
 >                                          # This assumes about half of the previously observed effect
 >                                          # was to do with framing(/instructions)
-> # Here we work out the power with an adjusted alpha of 0.025 = 0.05/2. This is because we will use the
-> # Holm-Bonferoni adjustment for multiple testing (Hypotheses 1 and 2). We don't have numbers for the
-> # hypothesis 2 so we will assume this will have the smallest p and need to be adjusted.
-> pwr.t.test(d = effectSizeOfInterest, sig.level = 0.025, power = 0.8, alternative = alt)
+> pwr.t.test(d = effectSizeOfInterest, sig.level = 0.05, power = 0.8, alternative = alt)
 
      Two-sample t test power calculation 
 
-              n = 77.31038
+              n = 63.76561
               d = 0.5
-      sig.level = 0.025
+      sig.level = 0.05
           power = 0.8
     alternative = two.sided
 
@@ -68,21 +65,21 @@ NOTE: n is number in *each* group
 > # effect measured in that hypothesis so will not base our sample size calculation on this hypothesis.
 > 
 > 
-> # Largest sample size is is 77.31038 per group. These sample sizes are based on t-tests, which can be less efficient
+> # Largest sample size is is 63.76561 per group. These sample sizes are based on t-tests, which can be less efficient
 > # than Wilcoxon signed rank tests. The Asymptotic Relative Efficiency (ARE) of a Wilcoxon test relative to a t-test
 > # has a lower bound of 0.864, meaning that at worst we require 1/0.864 = 1.1574 times the sample size of a t test (Riffenburgh, 2012).
-> sampleSize <- 77.31038/0.864
+> sampleSize <- 63.76561/0.864
 > sampleSize
-[1] 89.47961
+[1] 73.80279
 > 
-> # Which we will round to 90. This makes the sample size in both groups 180.
+> # Which we will round to 74. This makes the sample size in both groups 148.
 > # However, we expect a number of exclusions. Our previous experiment had a exclusion rate of 0.18.
 > # We have adjusted the wording on the 'bug' question because we were getting several reports that
 > # probably had no impact, so we expect that proportion to decrease.
-> # If we round our sample up to 200 participants, that gives us room for an exclusion rate of 0.1.
-> # Including this in the original sample size means we don't need a complicated stopping rule.
+> # If we add 20 to our sample to increase to 168 participants, that gives us room for an exclusion
+> # rate of just under 0.12. Including this in the original sample size means we don't need a complicated stopping rule.
 > 
-> # Final sample size: 200
+> # Final sample size: 168
 > 
 > 
 > # References
@@ -93,4 +90,4 @@ NOTE: n is number in *each* group
 > 
 > proc.time()
    user  system elapsed 
-  0.139   0.024   0.145 
+  0.135   0.020   0.138 

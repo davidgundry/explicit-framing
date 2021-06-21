@@ -6,10 +6,10 @@ Adapted from the "Direct Play" questions of the Play Experinece Scale (Pavlas et
 
 Responses on a 6 point likert scale: 1 = "strongly disagree" to 6 = "strongly agree"
 
-1. When I was using the game, it felt like I was playing rather than doing an experiment
-2. I would characterize my experience with the game as playing
+1. When I was using the app, it felt like I was playing rather than doing an experiment
+2. I would characterize my experience with the app as playing
 3. I was playing a game rather than doing an experiment
-4. (R) Using the game felt like doing an experiment 
+4. (R) Using the app felt like doing an experiment 
 
 ## Enjoyment
 

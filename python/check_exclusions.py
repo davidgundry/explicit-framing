@@ -3,7 +3,7 @@
 import numpy as np
 from load_process_exp3 import load_data, process_data
 
-minimum_moves = 15
+minimum_moves = 16
 
 dataset = 'data'
 print("Analysing dataset", dataset, "\n")

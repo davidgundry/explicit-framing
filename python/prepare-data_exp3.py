@@ -57,12 +57,11 @@ def removeLinesWithBadAgesOrLanguages(filename):
     excluded = []
     with open(filename) as f:
         for line in f:
-            x = re.search('"answers":\["[\-0-9]+","[a-z]+","([a-z]+)"', line) 
-            language = x.group(1)
+            x = re.search('"([\-0-9]+)","((male)|(female)|(other)|(prefer\-not\-to\-say))","([a-z]+)"', line) 
+            language = x.group(7)
             if language == "other":
                 excluded.append(line)
             else:
-                x = re.search('"answers":\["([\-0-9]+)"', line) 
                 age = int(x.group(1))
                 if (age >= 18):
                     output.append(line)
@@ -91,7 +90,7 @@ def removeMarkers(filename):
 def createDurationCSV(filename):
     with open(filename) as f:
         content = f.read()
-    content = re.sub('.+(normal|tool)","duration":([0-9\.]+).+', r'\1,\2', content)
+    content = re.sub('.+(HighFraming|LowFraming)","duration":([0-9\.]+).+', r'\1,\2', content)
     outputFile = "data/duration.csv"
     with open(outputFile, "w") as f:
         f.write(content)
@@ -100,7 +99,7 @@ def createDurationCSV(filename):
 def createAgeGenderCSV(filename):
     with open(filename) as f:
         content = f.read()
-    content = re.sub('.+"answers":\["([\-0-9]+)","([a-z]+)".+', r'\1,\2', content)
+    content = re.sub('.+"([\-0-9]+)","((male)|(female)|(other)|(prefer\-not\-to\-say))","([a-z]+)".+', r'\1,\7', content)
     outputFile = "data/age-gender.csv"
     with open(outputFile, "w") as f:
         f.write(content)
@@ -110,7 +109,7 @@ def justData(filename):
     with open(filename) as f:
         content = f.read()
     content = re.sub('"duration":[0-9\.]+,', '', content)
-    content = re.sub('"answers":\["[\-0-9]+","[a-z]+",', '"answers":[', content)
+    content = re.sub('"([\-0-9]+)","((male)|(female)|(other)|(prefer\-not\-to\-say))","([a-z]+)"', r'"\7"', content)
     outputFile = "data/data.json"
     with open(outputFile, "w") as f:
         f.write(content)

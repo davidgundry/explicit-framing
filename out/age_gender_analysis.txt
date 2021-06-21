@@ -1,4 +1,4 @@
 Analysing dataset age-gender 
 
-male    4
+english    4
 Name: gender, dtype: int64

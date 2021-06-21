@@ -11,19 +11,21 @@ Mann-Whitney U test: p = 0.33250277105101456 ; U = 2.0 ; significant = False ; d
 Hypothesis 2:  With experimental framing, participants will enjoy the game less
     A two-tailed two-sample t-test will be used to test whether the mean scores of Enjoyment
     are greater in the low-framing condition than the high-framing condition. α = 0.05.
-Game mean 2.357142857142857 sd 0.3030457633656634
-mean Tool 3.642857142857143 sd 0.3030457633656634
-two tailed t test: p = 0.05131670194948626 ; t = -4.242640687119282 ; significant = False ; d = -4.242640687119282 
+Game mean 2.7857142857142856 sd 0.10101525445522103
+mean Tool 3.357142857142857 sd 0.3030457633656634
+two tailed t test: p = 0.12712843905603047 ; t = -2.529822128134703 ; significant = False ; d = -2.529822128134703 
 
 
 Hypothesis 3:  Manipulation check: With high experimental framing, participants will
     experience the game with an 'experiment' frame rather than a 'play' frame.
     A two-tailed two-sample t-test will be used to test whether the mean scores of Play Framing
     are greater in the low-framing condition than the high-framing condition. α = 0.05.
-Game mean 4.5 sd 0.3535533905932738
+Game mean 4.0 sd 0.3535533905932738
 mean Tool 2.5 sd 0.3535533905932738
-two tailed t test: p = 0.02985749985466811 ; t = 5.65685424949238 ; significant = True ; d = 5.65685424949238 
+two tailed t test: p = 0.051316701949486204 ; t = 4.242640687119285 ; significant = False ; d = 4.242640687119285 
 
 
-every-day    4
+about-once-a-week     2
+about-once-a-month    1
+almost-never          1
 Name: gaming_frequency, dtype: int64

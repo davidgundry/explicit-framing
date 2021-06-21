@@ -64,6 +64,10 @@ Participants will be paid £1.00 for a 10 minute task.
 
 See the file `power-analysis.Rout`.
 
+### Stopping Rule
+
+After 30 participants, the data will be analysed to check whether there is an effect of our manipulation. This is to avoid spending too much money if our manipulation is not strong enough to have any effect. If there is no effect of the manipulation, or only a tiny effect, we will stop. Otherwise we will continue to the full sample size without stopping again.
+
 Variables
 ---------
 
@@ -71,9 +75,9 @@ Variables
 
 We will manipulate the information and instructions given to participants at the start of the experiment. There were two conditions:
 
-**High-Framing:** In the High-Framing condition, participants will be told that for the experiment we want to observe the word order that they prefer when describing shapes.
+**High-Framing**: In the High-Framing condition, participants will be told that for the experiment we want to observe the word order that they prefer when describing shapes. We attempt to present the task to be performed as an experimental task and consequential.
 
-**Low-Framing:** In the Low-Framing condition, participants will not be told we are interested in word order.
+**Low-Framing**: In the Low-Framing condition, participants will not be told we are interested in word order. We attempt to present the task as gameplay without consequences.
 
 ### Measured Variables
 
@@ -93,17 +97,11 @@ Analysis Plan
 
 ### Statistical Models
 
-**Hypothesis 1**: A two-tailed Mann-Whitney U test will be used to test whether the distribution of Accuracy differs significantly between the high-framing condition than the low-framing condition.
+**Hypothesis 1**: A two-tailed Mann-Whitney U test will be used to test whether the distribution of Accuracy differs significantly between the high-framing condition than the low-framing condition. α = 0.05
 
-**Hypothesis 2**: A two-tailed two-sample t-test will be used to test whether the mean scores of Enjoyment are greater in the low-framing condition than the high-framing condition.
+**Hypothesis 2**: A two-tailed two-sample t-test will be used to test whether the mean scores of Enjoyment are greater in the low-framing condition than the high-framing condition. α = 0.05
 
-**Hypothesis 3**: A two-tailed two-sample t-test will be used to test whether the mean scores of Play Framing are greater in the low-framing condition than the high-framing condition.
-
-### Inference Criteria
-
-P values for Hypotheses 1 and 2 will be adjusted using the Holm-Bonferoni method, maintaining a family-wise error rate of 0.05.
-
-P value for Hypothesis 3 (manipulation check) will be compared against a comparison-wise error rate of 0.05.
+**Hypothesis 3**: A two-tailed two-sample t-test will be used to test whether the mean scores of Play Framing are greater in the low-framing condition than the high-framing condition. α = 0.05
 
 ### Data Exclusion
 

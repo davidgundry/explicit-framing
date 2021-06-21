@@ -2,6 +2,10 @@
 
 This is a repository of materials and data for the explicit framing experiment in the Effect of Experiment Framing on Game Data study. 
 
+//TODO: See notes from meeting 11-06-21
+
+//TODO: see changes.md
+
 ## Directory Structure
 
 * `data/` - processed/anonymised data
@@ -30,7 +34,7 @@ From [intrinsic elicitation 2](https://github.com/davidgundry/intrinsic-elicitat
 
 ## Data collection
 
-200 participants @ £1 per participant on Prolific = £280
+168 participants @ £1 per participant on Prolific = ...
 
 //TODO: Provide details of data collection start/end etc. here
 

@@ -12,7 +12,7 @@ def process_data(rawData):
     data, language, version = [], [], [],
     for d in rawData:
         data.append(d["data"])
-        language.append(d["data"]["answers"][0])
+        language.append(d["data"]["answers"][11])
         version.append(d["data"]["gameVersion"])
             
     gaming_frequency = []
@@ -29,14 +29,14 @@ def process_data(rawData):
     time_per_input_from_moveDurations = []
     time_per_input_from_8min = []
     for i, d in enumerate(data):
-        gaming_frequency.append(d["answers"][1])
+        gaming_frequency.append(d["answers"][12])
         c1.append(d["consent"][0])
         c2.append(d["consent"][1])
         c3.append(d["consent"][2])
 
         # Calculate IMI Enjoyment subscale mean and Play Framing mean
         # Scores for questions 3 and 4 of IMI and 4 of Play Framing are reversed
-        a = [int(numeric_string) for numeric_string in d["answers"][2:13]]
+        a = [int(numeric_string) for numeric_string in d["answers"][0:11]]
         pf1.append(a[0])
         pf2.append(a[1])
         pf3.append(a[2])
