@@ -43,7 +43,7 @@ Data will be collected using the non-relational database service [restdb.io](htt
 The expected data format is in `raw/debug-example.json`, it looks like this (IDs are random):
 
     [ 
-        {"_id":"5f118222b0e1d1570001ce11","data":{"gameVersion":"HighFraming","loadTime":1594982440874,"uploadTime":1594982944815,"duration":485.424,"playDuration":480.002,"consent":[true,true,true],"answers":["27","female","english","every-day","6","6","6","6","1","2","2","2","2","2","2","nobug",null],"moves":[["circle","square","triangle"],["filled","empty","green"],["red","green","blue"],["big","empty","circle"],["small","empty","triangle"],["small","empty","triangle"],["filled","empty","green"],["red","green","blue"],["big","triangle","empty"],["small","empty","triangle"],["small","empty","circle"],["red","green","blue"],["empty","filled","green"],["empty","filled","green"],["green","red","blue"]],"moveDurations":[1.5314450000005309,1.915494999999486,1.7831050000004325,5.033134999999675,4.784264999998413,7.050825000000259,1.1063899999990099,2.8494300000002113,9.9504450000004,3.452929999999469,11.851834999999483,79.11336499999923,2.4985599999999977,34.44956000000093,3.0330149999990828]},"version":"1.0.0.IEX-enj-dataq-1.0.0.HighFraming","studyID":"daa2e38ef9864764b95f4e545","prolificPID":"6440a9870c404843a195ba4a","sessionID":"501517b49a904139b1508183","uid":176}
+        {"_id":"5f118222b0e1d1570001ce11","data":{"gameVersion":"HighFraming","loadTime":1594982440874,"uploadTime":1594982944815,"duration":485.424,"playDuration":480.002,"consent":[true,true,true],"answers":["6","6","6","6","1","2","2","2","2","2","2","nobug","","27","female","english","every-day"],"moves":[["circle","square","triangle"],["filled","empty","green"],["red","green","blue"],["big","empty","circle"],["small","empty","triangle"],["small","empty","triangle"],["filled","empty","green"],["red","green","blue"],["big","triangle","empty"],["small","empty","triangle"],["small","empty","circle"],["red","green","blue"],["empty","filled","green"],["empty","filled","green"],["green","red","blue"]],"moveDurations":[1.5314450000005309,1.915494999999486,1.7831050000004325,5.033134999999675,4.784264999998413,7.050825000000259,1.1063899999990099,2.8494300000002113,9.9504450000004,3.452929999999469,11.851834999999483,79.11336499999923,2.4985599999999977,34.44956000000093,3.0330149999990828]},"version":"3.1.0.explicit-framing-3.0.0.HighFraming","studyID":"daa2e38ef9864764b95f4e545","prolificPID":"6440a9870c404843a195ba4a","sessionID":"501517b49a904139b1508183","uid":176}
     ]
 
 * **_id**: Database record ID
@@ -81,19 +81,19 @@ The script will write files to disk in the folder "data". It will also write man
 After processing, the data (`data.json`) looks like this:
 
     [
-        {"data":{"gameVersion":"HighFraming","playDuration":480.002,"consent":[true,true,true],"answers":["english","every-day","6","6","6","6","1","2","2","2","2","2","2","nobug",null],"moves":[["circle","square","triangle"],["filled","empty","green"],["red","green","blue"],["big","empty","circle"],["small","empty","triangle"],["small","empty","triangle"],["filled","empty","green"],["red","green","blue"],["big","triangle","empty"],["small","empty","triangle"],["small","empty","circle"],["red","green","blue"],["empty","filled","green"],["empty","filled","green"],["green","red","blue"]],"moveDurations":[1.5314450000005309,1.915494999999486,1.7831050000004325,5.033134999999675,4.784264999998413,7.050825000000259,1.1063899999990099,2.8494300000002113,9.9504450000004,3.452929999999469,11.851834999999483,79.11336499999923,2.4985599999999977,34.44956000000093,3.0330149999990828]},"version":"1.0.0.IEX-enj-dataq-1.0.0.HighFraming"}
+        {"data":{"gameVersion":"HighFraming","playDuration":480.002,"consent":[true,true,true],"answers":["6","6","6","6","1","2","2","2","2","2","2","nobug","","english","every-day"],"moves":[["circle","square","triangle"],["filled","empty","green"],["red","green","blue"],["big","empty","circle"],["small","empty","triangle"],["small","empty","triangle"],["filled","empty","green"],["red","green","blue"],["big","triangle","empty"],["small","empty","triangle"],["small","empty","circle"],["red","green","blue"],["empty","filled","green"],["empty","filled","green"],["green","red","blue"]],"moveDurations":[1.5314450000005309,1.915494999999486,1.7831050000004325,5.033134999999675,4.784264999998413,7.050825000000259,1.1063899999990099,2.8494300000002113,9.9504450000004,3.452929999999469,11.851834999999483,79.11336499999923,2.4985599999999977,34.44956000000093,3.0330149999990828]},"version":"3.1.0.explicit-framing-3.0.0.HighFraming"}
     ]
 
 * **gameVersion**: Either "HighFraming" or "LowFraming".
 * **playDuration**: seconds between start of logged (non-tutorial) levels, and play-end interrupt before post-test questionnaire
 * **consent**: Checkbox values to consent questions, in order
 * **answers**: Answers to the questions:
-    1. What is your first language (`english`/`other`)
-    2. How often do you play digital games? (`every-day`/`several-times-a-week`/`about-once-a-week`/`about-once-a-month`/`almost-never`)
-    3. Four (4) Likert scale (`1-6`) answers to the Play Framing questions (see `materials/questions.md`) in order
-    4. Seven (7) Likert scale (`1-5`) answers to the Intrinsic Motivation Inventory: Enjoyment Subscale, in default question order
-    6. Answer to the question "Finally, did you encounter any bugs that may have had an effect on how you played the game? No/Yes" (`nobug`/`bug`)
-    7. Description of the bug (optional, string / `null`)
+    1. Seven (7) Likert scale (`1-5`) answers to the Intrinsic Motivation Inventory: Enjoyment Subscale, in default question order
+    2. Four (4) Likert scale (`1-6`) answers to the Play Framing questions (see `materials/questions.md`) in order
+    3. What is your first language (`english`/`other`)
+    4. How often do you play digital games? (`every-day`/`several-times-a-week`/`about-once-a-week`/`about-once-a-month`/`almost-never`)
+    5. Answer to the question "Finally, did you encounter any bugs that may have had an effect on how you played the game? No/Yes" (`nobug`/`bug`)
+    6. Description of the bug (optional, string / `null`)
 * **moves**: Array of moves attempted by the player (sets of three words inputted, whether or not they trigger an action in the game). These are in order they were selected. Moves are in order attempted.
 * **moveDurations**: Array of time taken (in seconds) for each move listed in `moves`.
 * **version**: Game version and condition data was collected from
@@ -116,7 +116,7 @@ This also includes participants who are excluded from the hypothesis tests due t
     LowFraming,485.231
     HighFraming,482.029
 
-Because the duration of play (with tutorial) was controlled at 480 seconds (8 minutes), the variation that is observed here is accounted for by the time spent in the tutorial. To see the time spent while moves were being logged in the main game, see the `playDuration` variable in `data.json`. This `duration` is separated from the rest of the data as (in principle) a player who spent an exceptional amount of time in the questionnaires could have their data identified in combination with Prolfic's log data. (`playDuration` is contained within the play and tutorial time that is fixed to almost exactly 480 seconds, so there is no such threat.)
+Because the duration of play (with tutorial) was controlled at 480 seconds (8 minutes), the variation that is observed here is accounted for by the time spent in menus/questionnaires. To see the time spent while moves were being logged in the main game, see the `playDuration` variable in `data.json`. This `duration` is separated from the rest of the data as (in principle) a player who spent an exceptional amount of time in the questionnaires could have their data identified in combination with Prolfic's log data. (`playDuration` is contained within the play and tutorial time that is fixed to almost exactly 480 seconds, so there is no such threat.)
 
 This also includes participants who are excluded from the hypothesis tests due to too few inputs (or reporting bugs) as above.
 
@@ -181,5 +181,3 @@ Thus "big empty blue triangle" is judged grammatical, but if you rearrange that 
 ### Correct form / mechanic actuations
 
 The game mechanic can never be succesfully actuated by certain types of input. For example, blocks can never be described by two adjectives of the same type (e.g. "red" and "blue"). The game also requires that exactly 1 noun be selected.
-
-//TODO: If we wanted to, we could exclude all inputs that don't correspond to this automatically, potentially reducing the amount of noise we collect.
