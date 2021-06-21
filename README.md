@@ -16,7 +16,7 @@ This is a repository of materials and data for the explicit framing experiment i
 
 ## Pre-Registration
 
-Pre-registration documents are found in `design/`. Dated uploads to OSF (which should match the records on OSF) are in `final/`. The power analysis script used in the pre-registration can be found in `r/`, which generated `out/power-anaysis.Rout`. You can generate this using the following command:
+Pre-registration documents are found in `design/`. The power analysis script used in the pre-registration can be found in `r/`, which generated `out/power-anaysis.Rout`. You can generate this using the following command:
 
     R CMD BATCH --quiet r/power-analysis.r out/power-analysis.Rout
 
