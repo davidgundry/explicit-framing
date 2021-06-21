@@ -2,10 +2,6 @@
 
 This is a repository of materials and data for the explicit framing experiment in the Effect of Experiment Framing on Game Data study. 
 
-//TODO: See notes from meeting 11-06-21
-
-//TODO: see changes.md
-
 ## Directory Structure
 
 * `data/` - processed/anonymised data
@@ -19,8 +15,6 @@ This is a repository of materials and data for the explicit framing experiment i
 * `raw/` - raw data stored here before processing and anonymisation
 
 ## Pre-Registration
-
-//TODO: Officially submit the preregistration once we're ready to run. When doing so, copy GitHub files to OSF storage so they can be archived with the pre-registration.
 
 Pre-registration documents are found in `design/`. Dated uploads to OSF (which should match the records on OSF) are in `final/`. The power analysis script used in the pre-registration can be found in `r/`, which generated `out/power-anaysis.Rout`. You can generate this using the following command:
 
