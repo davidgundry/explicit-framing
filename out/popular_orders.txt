@@ -1,0 +1,61 @@
+
+==================================
+Analysing Experiment  explicit-framing
+==================================
+
+One-way Chi-Square test to assess goodness of fit of distribution of detected
+grammar against null hypothesis that word orders are equally likely.
+Hypothesis: word orders are not equally likely
+ChiSquared = 1561.2808349146112 p = 0.0 df = 17
+Number of inputs in game used =  1581
+
+Post-hoc Chi-Square test, comparing grammatical orders against every other order.
+But we're not interested in comparing between pairs of grammatical orders, or between pairs
+of non-grammatical orders. If running this on new data, double check from the graph that the first three
+orders are the grammatical ones.
+A\B	ChiSq\cor. p-value	sig.
+scn 	 fcn 	 91.96 	 0.0 	 ****
+scn 	 cnf 	 73.62 	 0.0 	 ****
+scn 	 cns 	 127.93 	 0.0 	 ****
+scn 	 csn 	 176.89 	 0.0 	 ****
+scn 	 ncf 	 191.59 	 0.0 	 ****
+scn 	 fsn 	 217.54 	 0.0 	 ****
+scn 	 snc 	 215.45 	 0.0 	 ****
+scn 	 ncs 	 237.13 	 0.0 	 ****
+scn 	 nfs 	 237.13 	 0.0 	 ****
+scn 	 fnc 	 270.48 	 0.0 	 ****
+scn 	 snf 	 201.26 	 0.0 	 ****
+scn 	 nfc 	 260.57 	 0.0 	 ****
+scn 	 nsc 	 288.6 	 0.0 	 ****
+scn 	 nsf 	 246.28 	 0.0 	 ****
+scn 	 fns 	 270.48 	 0.0 	 ****
+sfn 	 fcn 	 59.65 	 0.0 	 ****
+sfn 	 cnf 	 44.7 	 0.0 	 ****
+sfn 	 cns 	 90.3 	 0.0 	 ****
+sfn 	 csn 	 134.07 	 0.0 	 ****
+sfn 	 ncf 	 147.58 	 0.0 	 ****
+sfn 	 fsn 	 171.77 	 0.0 	 ****
+sfn 	 snc 	 169.8 	 0.0 	 ****
+sfn 	 ncs 	 190.3 	 0.0 	 ****
+sfn 	 nfs 	 190.3 	 0.0 	 ****
+sfn 	 fnc 	 222.37 	 0.0 	 ****
+sfn 	 snf 	 156.54 	 0.0 	 ****
+sfn 	 nfc 	 212.78 	 0.0 	 ****
+sfn 	 nsc 	 240.03 	 0.0 	 ****
+sfn 	 nsf 	 199.04 	 0.0 	 ****
+sfn 	 fns 	 222.37 	 0.0 	 ****
+cfn 	 fcn 	 1.2 	 0.547 	 n.s.
+cfn 	 cnf 	 0.0 	 1.0 	 n.s.
+cfn 	 cns 	 9.17 	 0.007 	 **
+cfn 	 csn 	 28.97 	 0.0 	 ****
+cfn 	 ncf 	 36.61 	 0.0 	 ****
+cfn 	 fsn 	 51.86 	 0.0 	 ****
+cfn 	 snc 	 50.55 	 0.0 	 ****
+cfn 	 ncs 	 64.8 	 0.0 	 ****
+cfn 	 nfs 	 64.8 	 0.0 	 ****
+cfn 	 fnc 	 89.66 	 0.0 	 ****
+cfn 	 snf 	 42.04 	 0.0 	 ****
+cfn 	 nfc 	 81.91 	 0.0 	 ****
+cfn 	 nsc 	 104.66 	 0.0 	 ****
+cfn 	 nsf 	 71.27 	 0.0 	 ****
+cfn 	 fns 	 89.66 	 0.0 	 ****

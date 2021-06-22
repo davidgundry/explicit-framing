@@ -3,40 +3,40 @@ Analysing dataset data
 Hypothesis 1:  With high experimental framing, a greater proportion of the data will be accurate
     A two-tailed Mann-Whitney U test will be used to test whether the distribution of Accuracy
     differs significantly between the +Framing condition than the -Framing condition. α = 0.05
-High-framing mean 0.44666666666666666 sd 0.322957146177972
-Low-framing mean 0.47547169811320755 sd 0.2891300644385359
-Mann-Whitney U test: p = 0.2830036826877531 ; U = 1490.0 ; significant = False ; d = -0.09365243330061097 
+High-framing mean 0.46381578947368424 sd 0.32020574623952647
+Low-framing mean 0.4725 sd 0.2882587591815693
+Mann-Whitney U test: p = 0.40475377244962385 ; U = 1386.0 ; significant = False ; d = -0.02840642601992573 
 
 
 Hypothesis 2:  With experimental framing, participants will enjoy the game less
     A two-tailed two-sample t-test will be used to test whether the mean scores of Enjoyment
     are greater in the low-framing condition than the high-framing condition. α = 0.05.
-High-framing mean 3.3452380952380953 sd 0.33917684417850236
-Low-framing mean 3.3099730458221024 sd 0.2921471547234934
-two tailed t test: p = 0.5575474104290473 ; t = 0.5882680933021276 ; significant = False ; d = 0.11089218871109399 
+High-framing mean 3.3283208020050123 sd 0.3306113608524513
+Low-framing mean 3.2885714285714287 sd 0.2835045745928574
+two tailed t test: p = 0.5089233960309905 ; t = 0.6627805891555669 ; significant = False ; d = 0.1284219439379256 
 
 
 Hypothesis 3:  Manipulation check: With high experimental framing, participants will
     experience the game with an 'experiment' frame rather than a 'play' frame.
     A two-tailed two-sample t-test will be used to test whether the mean scores of Play Framing
     are greater in the low-framing condition than the high-framing condition. α = 0.05.
-High-framing mean 3.6083333333333334 sd 0.5883160878380257
-Low-framing mean 3.740566037735849 sd 0.4701735158196698
-two tailed t test: p = 0.19351256760694877 ; t = -1.3081865750238562 ; significant = False ; d = -0.24660129318345286 
+High-framing mean 3.587719298245614 sd 0.5947899315360353
+Low-framing mean 3.71 sd 0.466642370601745
+two tailed t test: p = 0.24413208174384685 ; t = -1.1712932299129777 ; significant = False ; d = -0.22695256313768303 
 
 
-several-times-a-week    33
-every-day               30
-almost-never            22
+several-times-a-week    30
+every-day               28
+almost-never            21
 about-once-a-week       14
 about-once-a-month      14
 Name: gaming_frequency, dtype: int64
 
 Exploratory: Correlation between play framing and accuracy
 (Correlation, p)
-(0.17732953151387498, 0.060244468589379645)
+(0.2098958215738421, 0.030013607071580142)
 
 Exploratory: TOST test
-diff in means: 0.02880503144654084
-ttest: Ttest_indResult(statistic=-0.4968135178067955, pvalue=0.6203031014244506)
-   tost: (0.04881085616324034, (1.6705848619390145, 0.04881085616324034, 110.97662356936142), (-2.6710789668988957, 0.004349077967092757, 110.97662356936142))
+diff in means: 0.008684210526315739
+ttest: Ttest_indResult(statistic=-0.14660444466087794, pvalue=0.8837253543977535)
+   tost: (0.025319043006815967, (1.9772379308035402, 0.025319043006815967, 104.92262107863019), (-2.272481603728954, 0.012548085087258947, 104.92262107863019))

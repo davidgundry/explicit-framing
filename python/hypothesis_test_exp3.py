@@ -198,7 +198,7 @@ def tost(high, low):
     print('ttest:', p1)
     print('   tost:', p2)
 
-minimum_moves = 15
+minimum_moves = 16
 dataset = 'data'
 print("Analysing dataset", dataset, "\n")
 rawData = load_data("data/"+dataset)

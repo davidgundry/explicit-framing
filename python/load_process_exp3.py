@@ -73,12 +73,12 @@ def process_data(rawData):
             proportion_of_valid_data_providing_mechanic_actuations_idealised.append(count_gram_idealised/count_correct_form)
         else:
             proportion_of_valid_data_providing_mechanic_actuations_idealised.append(0)
-        # Calculate proportions of valid moves (from last 15):
-        count_gram_last_16_idealised = sum([is_grammatical_idealised(a) and correct_form(a) for a in d["moves"][-15:]])
-        count_correct_form_last_16 = sum([correct_form(a) for a in d["moves"][-15:]])
+        # Calculate proportions of valid moves (from last 16):
+        count_gram_last_16_idealised = sum([is_grammatical_idealised(a) and correct_form(a) for a in d["moves"][-16:]])
+        count_correct_form_last_16 = sum([correct_form(a) for a in d["moves"][-16:]])
         grammatical_moves_last16_idealised.append(count_gram_last_16_idealised)
         moves_correct_form_last16.append(count_correct_form_last_16)
-        proportion_of_valid_data_last16_idealised.append(count_gram_last_16_idealised/15)
+        proportion_of_valid_data_last16_idealised.append(count_gram_last_16_idealised/16)
         if (count_correct_form_last_16 > 0):
             proportion_of_valid_data_providing_mechanic_actuations_last16_idealised.append(count_gram_last_16_idealised/count_correct_form_last_16)
         else:
