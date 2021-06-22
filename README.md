@@ -2,8 +2,6 @@
 
 This is a repository of materials and data for the explicit framing experiment in the Effect of Experiment Framing on Game Data study. 
 
-//TODO: read https://www.sciencedirect.com/science/article/pii/S0022103120304224?via%3Dihub
-
 ## Directory Structure
 
 * `data/` - processed/anonymised data
