@@ -24,7 +24,7 @@ def gender_bar_plot(df):
 
 def age_histogram(df):
     plt.clf()
-    bins = np.linspace(18, 70, 24)
+    bins = np.linspace(18, 140, 24)
     plt.hist(df['age'], bins)
     plt.suptitle('')
     plt.title("")
@@ -39,6 +39,9 @@ print("Analysing dataset", dataset, "\n")
 df = pd.read_csv("data/"+dataset+".csv", names=["age","gender"])
 
 print(df['gender'].value_counts())
+
+age = df['age']
+print("Age min:", min(age), "max", max(age), "sd", stdev(age), "mean", mean(age))
 
 gender_bar_plot(df)
 age_histogram(df)

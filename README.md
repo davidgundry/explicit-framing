@@ -2,6 +2,8 @@
 
 This is a repository of materials and data for the explicit framing experiment in the Effect of Experiment Framing on Game Data study. 
 
+//TODO: read https://www.sciencedirect.com/science/article/pii/S0022103120304224?via%3Dihub
+
 ## Directory Structure
 
 * `data/` - processed/anonymised data
@@ -28,9 +30,21 @@ From [intrinsic elicitation 2](https://github.com/davidgundry/intrinsic-elicitat
 
 ## Data collection
 
-168 participants @ £1 per participant on Prolific = ...
+Data collection start at 10:29 on 21/06/2021. 198 participants started the experiment. 27 returned their submissions, 3 timed out, leaving 168 participants who completed the experiment. Data collection ended at 14:26 on 21/06/2021. 161 records retrieved from database meaning there were 7 missing from failed submissions or non-submissions out of those who completed.
 
-//TODO: Provide details of data collection start/end etc. here
+Records were retrieved at 30 submissions to check manipulation is plausible (and we're not just getting nothing at all). Processed data is in `first-30.json`. 2 excluded from first 30 because first langauge not english. The first 30 are included in the overall dataset.
+
+168 participants @ £1 per participant on Prolific = £235.20. Average pay per hour = £5.78. Median completion approx 10.33 but with 18 participants taking much more time than reasonable. Participants have been paid.
+
+In anonymisation 5 records were removed because of language reported not being English, resulting in 156 published records inlcuded in `data.json`, `age-gender.csv`, and `duration.csv`.
+
+Excluded due to moves < 16 = 36
+Excluded due reporting bugs 13
+Excluded due to language 0 (should be 0 as already excluded)
+
+Total of 107 to be included in hypothesis tests, with 57 in the high framing condition and 50 in the low framing condition.
+
+Raw data has been deleted on 22/06/2021.
 
 ## Data Source
 

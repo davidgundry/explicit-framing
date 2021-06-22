@@ -22,7 +22,7 @@
 import random
 import re
 
-filename = "raw/debug-example.json"
+filename = "raw/first-30.json"
 
 def shuffle(filename):
     with open(filename) as f:
@@ -88,18 +88,26 @@ def removeMarkers(filename):
     return outputFile
 
 def createDurationCSV(filename):
-    with open(filename) as f:
-        content = f.read()
-    content = re.sub('.+(HighFraming|LowFraming)","duration":([0-9\.]+).+', r'\1,\2', content)
     outputFile = "data/duration.csv"
-    with open(outputFile, "w") as f:
-        f.write(content)
+    with open(filename) as f:
+        with open(outputFile, "w") as csv:
+            for line in f:
+                x = re.search('"loadTime":([0-9]+),"uploadTime":([0-9]+)', line)
+                y = re.search('(HighFraming|LowFraming)', line)
+                if (x == None or y == None):
+                    print("duration skipped line: " + line)
+                else:
+                    start = int(x.group(1))
+                    end = int(x.group(2))
+                    dur = (end-start)/1000
+                    condition = y.group(1)
+                    csv.write(condition + "," + str(dur) + "\n")
     return outputFile
 
 def createAgeGenderCSV(filename):
     with open(filename) as f:
         content = f.read()
-    content = re.sub('.+"([\-0-9]+)","((male)|(female)|(other)|(prefer\-not\-to\-say))","([a-z]+)".+', r'\1,\7', content)
+    content = re.sub('.+"([\-0-9]+)","((male)|(female)|(other)|(prefer\-not\-to\-say))","([a-z]+)".+', r'\1,\2', content)
     outputFile = "data/age-gender.csv"
     with open(outputFile, "w") as f:
         f.write(content)
@@ -110,6 +118,7 @@ def justData(filename):
         content = f.read()
     content = re.sub('"duration":[0-9\.]+,', '', content)
     content = re.sub('"([\-0-9]+)","((male)|(female)|(other)|(prefer\-not\-to\-say))","([a-z]+)"', r'"\7"', content)
+    content = re.sub('\["start"\],?', '', content) # Recoding pressing the "start" button to start the game. This shouldn't have been logged.
     outputFile = "data/data.json"
     with open(outputFile, "w") as f:
         f.write(content)
@@ -126,9 +135,9 @@ def wrapWithSquareBrackets(filename):
 f = filename
 f = removeLinesWithoutProlificPIDS(f)
 f = removeLinesWithBadAgesOrLanguages(f)
-f = removeMarkers(f)
 dcsv = createDurationCSV(f)
 shuffle(dcsv)
+f = removeMarkers(f)
 agcsv = createAgeGenderCSV(f)
 shuffle(agcsv)
 jdjson = justData(f)

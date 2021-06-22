@@ -64,10 +64,15 @@ def process_data(rawData):
         total_moves.append(count_all)
         grammatical_moves_idealised.append(count_gram_idealised)
         moves_correct_form.append(count_correct_form)
-        proportion_of_valid_data_idealised.append(count_gram_idealised/count_all)
+        if (count_all > 0):
+            proportion_of_valid_data_idealised.append(count_gram_idealised/count_all)
+        else:
+            proportion_of_valid_data_idealised.append(0)
         proportion_of_valid_data_first20_idealised.append(count_gram_first20_idealised/20)
-        proportion_of_valid_data_providing_mechanic_actuations_idealised.append(count_gram_idealised/count_correct_form)
-
+        if (count_correct_form > 0):
+            proportion_of_valid_data_providing_mechanic_actuations_idealised.append(count_gram_idealised/count_correct_form)
+        else:
+            proportion_of_valid_data_providing_mechanic_actuations_idealised.append(0)
         # Calculate proportions of valid moves (from last 15):
         count_gram_last_16_idealised = sum([is_grammatical_idealised(a) and correct_form(a) for a in d["moves"][-15:]])
         count_correct_form_last_16 = sum([correct_form(a) for a in d["moves"][-15:]])
@@ -82,8 +87,10 @@ def process_data(rawData):
 
         #Calculate Time per input
         time_per_input_from_moveDurations.append(sum(d["moveDurations"])/len(d["moveDurations"]))
-        time_per_input_from_8min.append((8*60)/count_all)
-
+        if count_all > 0:
+            time_per_input_from_8min.append((8*60)/count_all)
+        else:
+            time_per_input_from_8min.append(0)
     d = { 
             "version": version,
             "language": language,

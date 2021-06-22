@@ -17,11 +17,11 @@ import matplotlib.pyplot as plt
 from statistics import mean, stdev
 from math import sqrt
 
-def duration_histogram(gameCondition, toolCondition):
+def duration_histogram(high, low):
     plt.clf()
-    bins = np.linspace(0, 720, 24)
-    plt.hist(gameCondition['duration'], bins, alpha=0.5, label="Game")
-    plt.hist(toolCondition['duration'], bins, alpha=0.5, label="Tool")
+    bins = np.linspace(500, 1200, 24)
+    plt.hist(high['duration'], bins, alpha=0.5, label="High Framing")
+    plt.hist(low['duration'], bins, alpha=0.5, label="Low Framing")
     plt.suptitle('')
     plt.title("")
     plt.legend(loc='upper right')
@@ -41,25 +41,15 @@ dataset = 'duration'
 print("Analysing dataset", dataset, "\n")
 df=  pd.read_csv("data/"+dataset+".csv", names=["version","duration"])
 
-gameCondition = df[df['version']=='normal']
-toolCondition = df[df['version']=='tool']
+high = df[df['version']=='HighFraming']
+low = df[df['version']=='LowFraming']
 
-duration_histogram(gameCondition,toolCondition)
+duration_histogram(high,low)
 duration_boxplot(df)
 
+c0 = high['duration']
+c1 = low['duration']
 
-c0 = gameCondition['duration']
-c1 = toolCondition['duration']
-alpha = 0.05
-ttest = ttest_ind(c0, c1)
-n0 = len(c0)
-n1 = len(c1)
-cond0 = (n0 - 1) * (stdev(c0) ** 2)
-cond1 = (n1 - 1) * (stdev(c1) ** 2)
-pooledSD = sqrt((cond0 + cond1) / (n0 + n1 - 2))
-cohens_d = (mean(c0) - mean(c1)) / pooledSD
-
-print("game condition: mean", mean(c0), "sd", stdev(c0))
-print("tool condition: mean", mean(c1), "sd", stdev(c1))
-print(ttest, cohens_d)
+print("High Framing condition: mean", mean(c0), "sd", stdev(c0), "Min", min(c0), "Max", max(c0))
+print("Low Frmaing condition: mean", mean(c1), "sd", stdev(c1), "Min", min(c1), "Max", max(c1))
 

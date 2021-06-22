@@ -1,4 +1,7 @@
 Analysing dataset age-gender 
 
-english    4
+female    96
+male      58
+other      2
 Name: gender, dtype: int64
+Age min: 18 max 135 sd 13.621667833787026 mean 30.237179487179485

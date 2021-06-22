@@ -1,2 +1,4 @@
 Analysing dataset duration 
 
+High Framing condition: mean 611.4397272727273 sd 91.67324812380862 Min 534.085 Max 1108.684
+Low Frmaing condition: mean 636.6450126582279 sd 81.93274322702106 Min 544.893 Max 1019.311

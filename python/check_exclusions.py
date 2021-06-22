@@ -11,9 +11,9 @@ rawData = load_data("data/"+dataset)
 df = process_data(rawData)
 
 before_consent = len(df.index)
-df = df[df['consent_understand'] == "true"]
-df = df[df['consent_publication'] == "true"]
-df = df[df['consent'] == "true"]
+df = df[df['consent_understand'] == True]
+df = df[df['consent_publication'] == True]
+df = df[df['consent'] == True]
 print("Excluded due to lack of consent (should be 0)", before_consent - len(df.index))
 
 before_move_min = len(df.index)

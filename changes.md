@@ -20,7 +20,7 @@ High framing condition (I assume this is high experimental framing :)
 
 * Within the game:
     - Change language: Instead of "good job, you cleared the level." Say "Good job, you cleared the task."
-    - Throughout all screens, replace "level" with "task" //TODO: check
+    - Throughout all screens, replace "level" with "task"
     - "Clear 3 adjacent blocks for an extra move" instead of "bonus move"
     - Transition after tutorial: "You've got it! Let's play!" Change into "You've got it! Let's continue"
     - In the level feedback "Level cleared", write "Task completed”, “Task X, "Difficulty multiplier", and "next task". Remove the stars if you can. //TODO: should we replace stars, as otherwise we only change text. Removing stars means we are taking a way a game feature, not just re-describing it.
