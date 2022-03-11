@@ -5,7 +5,7 @@ Hypothesis 1:  With high experimental framing, a greater proportion of the data 
     differs significantly between the +Framing condition than the -Framing condition. α = 0.05
 High-framing mean 0.46381578947368424 sd 0.32020574623952647
 Low-framing mean 0.4725 sd 0.2882587591815693
-Mann-Whitney U test: p = 0.40475377244962385 ; U = 1386.0 ; significant = False ; d = -0.02840642601992573 
+Mann-Whitney U test: p = 0.8095075448992477 ; U = 1386.0 ; significant = False ; d = -0.02840642601992573 
 
 
 Hypothesis 2:  With experimental framing, participants will enjoy the game less
